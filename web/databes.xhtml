@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>HAMUZ</title>
+    </h:head>
+    <style> body{
+            
+                     background-image: url("picturs/homba.jpg");
+
+               
+                background-size: 80%;
+                margin: 0px;
+                font-family:sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                
+            }
+                        table{
+                border-collapse: inherit;
+                width: 60%;
+                
+            }
+                       td{
+                  background-color: darksalmon;
+              font-size:1rem;
+              color:white;
+              border-style:solid;
+              border-width:1px;
+            }
+            .btn{
+                right: 50px;
+                top: 70px;
+                padding: 10px 20px 10px 20px;
+            }
+            .ou3{
+           
+                          position: fixed;
+                        right: 800px;
+                        top: 330px;
+                          color:chartreuse;
+                         font-style:inherit;
+                        font-size: 1rem;
+                        font-weight: bolder;
+            }
+            .in3{
+             
+                          position: fixed;
+                        right: 600px;
+                        top: 330px;
+                          color:black;
+                         font-style:inherit;
+                        font-size: 1rem;
+            }
+            .btn{
+                 position: fixed;
+                         
+                        right: 10px;
+                        top: 10px;
+                        color:darksalmon;
+                         font-style:italic;
+                        font-size: larger;
+            }
+             .btn1{
+                 position: fixed;
+                         border-radius: 28px;
+                        right: 840px;
+                        top: 360px;
+                        color:darksalmon;
+                         font-style:italic;
+                        font-size: larger;
+            }
+
+            
+            </style>
+    
+    <h:body>
+       
+        <h:form>
+        
+           
+<h:commandButton class="btn" value="logout" action="oner.xhtml" /> 
+                  
+
+
+           
+         <h:dataTable value="#{soldtabl.soldss}" var="it">
+                    <h:column>
+                        <f:facet name="hader">name</f:facet>
+                        <h:outputText value=" #{it.name}"/>  
+                    </h:column>
+                     
+                     <h:column>
+                        <f:facet name="hader">
+                            ADDRES
+                        </f:facet>
+                      <h:outputText value="  #{it.addres}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="hader"> date </f:facet>
+                        <h:outputText value="#{it.date}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="hader"> quantity </f:facet>
+                        <h:outputText value=" #{it.quantity}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="hader"> paymentway </f:facet>
+                        <h:outputText value=" #{it.paymentway}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="hader"> itemtayp </f:facet>
+                       <h:outputText value=" #{it.itemtayp}"/>
+                    </h:column>
+             
+              <h:column>
+                        <f:facet name="hader"> Bar_code </f:facet>
+                        <h:outputText value=" #{it.bar_code}"/>
+                    </h:column>
+             
+             
+                    <h:column>
+                        <f:facet name="hader"> cost </f:facet>
+                       <h:outputText value=" #{it.cost}"/>
+                    </h:column>             
+    </h:dataTable>
+</h:form>
+<br></br><br></br>
+  
+<h:form>
+    
+<h:outputText value="inter ps_no" style="right:1300px"/>
+<h:inputText style="right:1200px" value="#{sold.no}"/>
+
+
+<h:outputText value="inter an item" style="right:1300px"/>
+<h:inputText style="right:1200px" value="#{sold.items}"/>
+
+
+     <h:commandButton value="add" style="right: 1000px;" action="#{sold.adds}"/>
+
+
+     <h:dataTable  var="as" style="width: 20%; align-self: center;"  value="#{soldtabl.items}">
+                      <h:column>
+                        <f:facet name="hader"> no </f:facet>
+                           <h:outputText value="  #{as.no}"/>
+                       
+                    </h:column>
+    
+                      <h:column>
+                        <f:facet name="hader"> items </f:facet>
+                       #{as.items}
+                    </h:column>
+         
+         
+    
+    
+</h:dataTable>
+     <h:outputText value="INTER ITEM NAME" class="ou3"/>
+     <h:inputText  value="#{edetadd.items}" class="in3"/>
+     <h:commandButton  class="btn1" value="delet"  action="#{edetadd.deleteitem(edetadd.items)}"/>
+         </h:form>
+ 
+    </h:body>
+</html>
+

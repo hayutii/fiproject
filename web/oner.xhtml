@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>HAMUZ</title>
+    </h:head>
+    
+        <style>
+            .back{
+                background-color: cadetblue
+            }
+           .btn{
+                border-radius: 28px;
+                font-size: 19px;
+               text-decoration: none;
+               font-family: Arial;
+              
+        </style>
+    <h:body styleClass="back">
+        
+        
+        <h:form>
+             <fieldset style="width: 500px; margin:auto; padding: 20px; margin-top: 150px; border-bottom-color:red; ">
+            <legend>Account</legend>
+             <h1> dera admean pleas login </h1>
+            
+		<h:outputText value="Username" style="font-weight: bold; color: navy; font-size: 30px"/>
+                    <h:inputText id="username" value="#{validben.username}" ></h:inputText>
+        <br></br><br></br>
+                
+		<h:outputText value="PASSWORD" style="font-weight: bold; color: navy; font-size: 30px "/>
+                <h:inputSecret value="#{validben.passworde}" ></h:inputSecret> 
+        <br></br><br></br>
+                   <div class="btn">
+                      
+                       <h:commandButton class="btn clas" value="login" action="#{validben.validate()}" /> 
+                        <h:commandButton action="index.xhtml" value="back" class="btn clas" />
+                   </div>
+        </fieldset>
+        </h:form>
+        
+    </h:body>
+</html>
+
