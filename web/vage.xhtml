@@ -202,12 +202,7 @@
               border-style:dashed;
               border-width:1px;
             }
-            .ll{
-                left: 50px;
-                font-size: 30px; 
-                color: black;
-                    font-style: oblique;
-            }   
+           
                     
                     
         </style>
@@ -218,7 +213,7 @@
  <div class="dv">
             <h1 style="text-align: center; font-family: monospace; font-size: 50px; top: 180px; align-content: center; color: black">  HAMUZ SUPERMARKET </h1>
             <h1 style=" text-align: center; font-family: monospace; font-size: 30px; top: 200px; align-content: center; color: red">   FRUIT AND VAGETABEL STOCK </h1>
-            <h:outputText class="ll"  value="avalebl items"/>             
+                      
             <h:outputText class="ou1" value="Name"/>
             <h:outputText class="ou11" value="Addres"/>
             <h:outputText class="ou12" value="Date"/>
@@ -244,13 +239,13 @@
                
                
                <h:commandButton value="order" class="btn" action="#{sold.soll()}"/>               
-               <h:commandButton value="back" class="btn2" action="custom.xhtml" />
-               <h:commandButton value="edit" class="btn3" action="edetpag.xhtml" />
+               <h:commandButton value="back" class="btn3" action="custom.xhtml" />
+               <h:commandButton value="edit" class="btn2" action="edetpag.xhtml" />
                 </div>
             
               <h:dataTable  var="as"   value="#{soldtabl.vage}">                        
                       <h:column>
-                        <f:facet name="hader"> items </f:facet>
+                        <f:facet name="header"> AVAILABLE ITEMS </f:facet>
                        #{as.items}
                     </h:column>
              </h:dataTable>

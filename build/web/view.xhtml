@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>HAMUZ</title>
+    </h:head>
+    <style> body{
+            
+                     background-image: url("picturs/homba.jpg");
+
+               
+                background-size: 80%;
+                margin: 0px;
+                font-family:sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                
+            }
+                        table{
+                border-collapse: inherit;
+                width: 60%;
+                
+            }
+                       td{
+                  background-color: darksalmon;
+              font-size:1rem;
+              color:white;
+              border-style:solid;
+              border-width:1px;
+            }
+            
+            .btn{
+                
+                right: 50px;
+                top: 70px;
+                padding: 10px 20px 10px 20px;
+
+            }
+                       
+            </style>
+    
+    <h:body>
+       
+        <h:form>
+        
+           
+<h:commandButton style=" position: fixed;
+                          right: 50px;
+                          top: 30px;
+                          color:darkslateblue;
+                           font-style:italic;
+                           font-size: larger;
+                            border-radius: 28px;" value="BACK" action="userpag.xhtml" /> 
+
+
+<h:outputLabel style="position: fixed;
+                      color:red;
+                      font-style:inherit;
+                      font-size: 2rem;" value="SHOPING DETAIL"/>
+<br></br><br></br>
+          
+         <h:dataTable value="#{soldtabl.getSoldss()}" var="it">
+                    <h:column>
+                        <f:facet name="header">NAME</f:facet>
+                        <h:outputText value=" #{it.name}"/>  
+                    </h:column>
+                     
+                     <h:column>
+                        <f:facet name="header">
+                            ADDRESS
+                        </f:facet>
+                      <h:outputText value="  #{it.addres}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header"> DATE </f:facet>
+                        <h:outputText value="#{it.date}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header"> QUANTITY </f:facet>
+                        <h:outputText value=" #{it.quantity}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header"> PAYMENT WAY </f:facet>
+                        <h:outputText value=" #{it.paymentway}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header"> ITEM TYPE </f:facet>
+                       <h:outputText value=" #{it.itemtayp}"/>
+                    </h:column>
+             
+              <h:column>
+                        <f:facet name="header"> BAR_CODE </f:facet>
+                        <h:outputText value=" #{it.bar_code}"/>
+                    </h:column>
+             
+             
+                    <h:column>
+                        <f:facet name="header"> COST </f:facet>
+                       <h:outputText value=" #{it.cost}"/>
+                    </h:column>             
+    </h:dataTable>
+                    
+
+<br></br><br></br>
+<h:outputLabel style="position: fixed;
+                      color:red;
+                      font-style:inherit;
+                      font-size: 2rem;" value="USERS DETAIL"/>
+
+<br></br><br></br>
+
+
+<h:dataTable value="#{newClass.users}" var="itt">
+                    <h:column>
+                        <f:facet name="header">
+                           F_NAME
+                        </f:facet>
+                        <h:outputText value=" #{itt.fname}"/>  
+                    </h:column>
+                     
+                     <h:column>
+                        <f:facet name="header">
+                            L_NAME
+                        </f:facet>
+                      <h:outputText value="  #{itt.lname}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header"> 
+                            ADDRESS
+                        </f:facet>
+                        <h:outputText value="#{itt.address}"/>
+                    </h:column>
+                         <h:column>
+                        <f:facet name="header">
+                            PHON_NO
+                        </f:facet>
+                        <h:outputText value="#{itt.phon_no}"/>
+                    </h:column>
+                    
+                    <h:column>
+                        <f:facet name="header"> 
+                            PASSWORD 
+                        </f:facet>
+                        <h:outputText value=" #{itt.passworde}"/>
+                    </h:column>
+                    
+ </h:dataTable>
+ 
+
+
+  </h:form>
+ 
+    </h:body>
+</html>
+

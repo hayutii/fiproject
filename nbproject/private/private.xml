@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/video/fan/web/databes.xhtml</file>
+            <file>file:/D:/video/fan/web/view.xhtml</file>
             <file>file:/D:/video/fan/src/java/newpackage/edetadd.java</file>
-            <file>file:/D:/video/fan/web/edetpag.xhtml</file>
             <file>file:/D:/video/fan/src/java/newpackage/Sold.java</file>
             <file>file:/D:/video/fan/src/java/newpackage/soldtabl.java</file>
+            <file>file:/D:/video/fan/src/java/newpackage/userrigs.java</file>
+            <file>file:/D:/video/fan/web/edititem.xhtml</file>
+            <file>file:/D:/video/fan/src/java/newpackage/NewClass.java</file>
         </group>
     </open-files>
 </project-private>

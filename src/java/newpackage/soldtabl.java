@@ -5,16 +5,16 @@
  */
 package newpackage;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+//import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+////import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -22,13 +22,11 @@ import javax.faces.bean.RequestScoped;
  *
  * @author hayat
  */
-@ManagedBean 
+@ManagedBean
 @RequestScoped
 public class soldtabl {
 
-    public List<Sold> getSoldss() 
-            
-            throws SQLException, ClassNotFoundException {
+    public List<Sold> getSoldss()throws SQLException, ClassNotFoundException {
          List<Sold> solds=new ArrayList<>();
          // databescon con = new databescon();
           //Statement st;
@@ -63,14 +61,14 @@ public List<Sold> getItems()
             throws SQLException, ClassNotFoundException {
          List<Sold> itemss=new ArrayList<>();
           try {
-              //Connection con=null;
+              
            databescon db = new databescon();
            Connection con = db.connMethod();  
             ResultSet rs = con.createStatement().executeQuery("select * from ITEMSS");
                 
               while (rs.next()) {
                 Sold sol = new Sold();
-                  //Sold so = new Sold();
+                  
                 sol.setNo(rs.getString("NO"));
                 sol.setItems(rs.getString("ITEMS"));
                 itemss.add(sol);
@@ -82,6 +80,9 @@ public List<Sold> getItems()
          return itemss;
 }
 
+
+
+//desplay chocolate items in choco page
  public List<Sold> getCoco() 
              throws SQLException, ClassNotFoundException {
          List<Sold> itemm=new ArrayList<>();
@@ -105,6 +106,9 @@ public List<Sold> getItems()
          return itemm;
 
 }
+ 
+ 
+ //display cosmotics items in cosmo page
  public List<Sold> getCosmo() 
              throws SQLException, ClassNotFoundException {
          List<Sold> item=new ArrayList<>();
@@ -128,6 +132,9 @@ public List<Sold> getItems()
          return item;
 
 }
+ 
+ 
+ //display vagtabl and fruit items in vage page
  public List<Sold> getVage() 
              throws SQLException, ClassNotFoundException {
          List<Sold> iteml=new ArrayList<>();

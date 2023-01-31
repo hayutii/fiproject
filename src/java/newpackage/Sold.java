@@ -7,22 +7,21 @@ package newpackage;
 
 
 //import java.io.Serializable;
-import com.sun.xml.rpc.processor.modeler.j2ee.xml.string;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+//import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+//import java.sql.Statement;
 import java.util.ArrayList;
 //import static java.util.Collections.list;
 //import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.Map;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.context.FacesContext;
+//import javax.faces.context.FacesContext;
 //import javax.faces.bean.SessionScoped;
 
 /**
@@ -217,7 +216,7 @@ public class Sold {
             pst.setString(8,bar_code);
             
             pst.executeUpdate();
-            pst.executeUpdate();
+
       }
       catch(SQLException | ClassNotFoundException e)
       {
@@ -226,6 +225,4 @@ public class Sold {
       }
        
   }
-
- 
 }
